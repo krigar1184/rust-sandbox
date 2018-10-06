@@ -1,0 +1,6 @@
+[package]
+name = "stepic-algorithms"
+version = "0.1.0"
+authors = ["vagrant"]
+
+[dependencies]

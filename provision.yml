@@ -1,0 +1,36 @@
+---
+- hosts: all
+  remote_user: root
+  become: yes
+  tasks:
+    - name: upgrade all
+      apt:
+        name: "*"
+        state: latest
+        force_apt_get: yes
+
+    - name: install gcc
+      apt:
+        name: gcc
+        state: present
+        force_apt_get: yes
+
+    - name: install rustup
+      shell: |
+        curl https://sh.rustup.rs -sSf | sh
+        expect "Current installation options: "
+        send 1
+        exit 0
+
+    - name: set nightly as default rustup toolchain
+      command: $HOME/.cargo/bin/rustup default nightly
+      become: yes
+      become_user: vagrant
+      notify:
+        - update rustup
+
+  handlers:
+    - name: update rustup
+      command: $HOME/.cargo/bin/rustup update
+      become_user: vagrant
+      become: yes

@@ -1,0 +1,10 @@
+[package]
+name = "minigrep"
+version = "0.1.0"
+authors = ["vagrant"]
+
+[dependencies]
+
+[profile.dev]
+debug = true
+opt-level = 0

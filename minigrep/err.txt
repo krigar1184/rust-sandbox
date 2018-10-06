@@ -1,0 +1,3 @@
+    Finished dev [unoptimized + debuginfo] target(s) in 0.24s
+     Running `target/debug/minigrep`
+Problem parsing arguments: Not enough arguments

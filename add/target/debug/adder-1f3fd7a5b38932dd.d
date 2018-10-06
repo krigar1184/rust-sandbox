@@ -1,0 +1,1 @@
+/Users/krigar1184/Projects/rust-os-tutorial/add/target/debug/adder-1f3fd7a5b38932dd.dSYM: /Users/krigar1184/Projects/rust-os-tutorial/add/add-one/src/lib.rs /Users/krigar1184/Projects/rust-os-tutorial/add/adder/src/main.rs
